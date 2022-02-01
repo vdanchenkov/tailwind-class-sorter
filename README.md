@@ -36,6 +36,8 @@ Have no option to disable autosave.
 
 Will not work in multi-root or monorepo workspaces.
 
+Does not watch for changes in tailwind.config.js, you have to reload vscode window to refresh.
+
 ## Release Notes
 
 ### 0.0.1
