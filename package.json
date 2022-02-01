@@ -1,0 +1,49 @@
+{
+	"name": "tailwind-class-sorter",
+	"displayName": "Tailwind class sorter",
+	"publisher": "vdanchenkov",
+	"description": "Sorts tailwind classes in a way similar to prettier-plugin-tailwindcss",
+	"version": "0.0.1",
+	"engines": {
+		"vscode": "^1.63.0"
+	},
+	"repository": "vdanchenkov/tailwind-class-sorter",
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"workspaceContains:**/tailwind.config.js"
+	],
+	"main": "./extension.js",
+	"contributes": {
+		"commands": [
+			{
+				"command": "tailwind-class-sorter.sortTailwindClasses",
+				"title": "Sort Tailwind Classes"
+			}
+		],
+		"configuration": {
+			"properties": {
+				"tailwind-class-sorter.classRegex" : {
+					"type": "object"
+				}
+			}
+		}
+	},
+	"scripts": {
+		"lint": "eslint .",
+		"pretest": "yarn run lint"
+	},
+	"devDependencies": {
+		"@types/glob": "^7.2.0",
+		"@types/mocha": "^9.0.0",
+		"@types/node": "14.x",
+		"@types/vscode": "^1.63.0",
+		"@vscode/test-electron": "^2.0.3",
+		"eslint": "^8.6.0",
+		"glob": "^7.2.0",
+		"mocha": "^9.1.3",
+		"prettier": "^2.5.1",
+		"typescript": "^4.5.4"
+	}
+}
